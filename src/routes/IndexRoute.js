@@ -6,7 +6,7 @@ export default class IndexRoute extends Component {
     return (
       <div>
         <h1>Soccer app</h1>
-        <Link to='/seasons'>Seasons</Link>
+        <Link to="/seasons">Seasons</Link>
       </div>
     );
   }
