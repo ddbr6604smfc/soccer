@@ -1,2 +1,2 @@
 # soccer
-<img src="https://img.shields.io/travis/ddbr6604smfc/soccer.svg" alt="status">
+[![Build Status](https://travis-ci.org/ddbr6604smfc/soccer.svg)](https://travis-ci.org/ddbr6604smfc/soccer)
