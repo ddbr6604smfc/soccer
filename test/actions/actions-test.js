@@ -20,8 +20,8 @@ describe('actions', () => {
 
   describe('requestAllSeasons', () => {
     it('should fetch all seasons', (done) => {
-      nock('http://api.football-data.org/')
-        .get('/alpha/soccerseasons')
+      nock('https://soccer-proxy.herokuapp.com')
+        .get('/seasons')
         .reply(200, seasonsFixture);
 
       const dispatch = spy();
@@ -37,8 +37,8 @@ describe('actions', () => {
     });
 
     it('should not refetch all seasons', (done) => {
-      nock('http://api.football-data.org/')
-        .get('/alpha/soccerseasons')
+      nock('https://soccer-proxy.herokuapp.com')
+        .get('/seasons')
         .reply(200, seasonsFixture);
 
       const dispatch = spy();

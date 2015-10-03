@@ -11,13 +11,7 @@ export const requestAllSeasons = () => (dispatch, getState) => {
     return Promise.resolve();
   }
 
-  const requestOptions = {
-    headers: {
-      'X-Auth-Token': '3c2e6093b48744b289258b78ed397659',
-    },
-  };
-
-  return fetch('http://api.football-data.org/alpha/soccerseasons', requestOptions)
+  return fetch('https://soccer-proxy.herokuapp.com/seasons')
     .then(response => response.json())
     .then(seasons => dispatch(receiveAllSeasons(seasons)))
     .catch(err => {
