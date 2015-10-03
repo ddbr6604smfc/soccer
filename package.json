@@ -10,8 +10,8 @@
     "test:prod": "npm test ",
     "test:watch": "npm test -- --watch",
     "html:prod": "htmlmin src/index.html -o dist/index.html",
-    "deploy": "npm run lint:prod && npm run test:prod && npm run compile:prod && npm run html:prod && bin/deploy",
-    "clean": "rm -rf dist/ .publish src/build",
+    "deploy": "npm run lint:prod && npm run test:prod && npm run compile:prod && npm run html:prod && surge -p dist -d ddbr6604smfc-soccer.surge.sh",
+    "clean": "rm -rf dist/ src/build",
     "start": "npm run compile:watch"
   },
   "dependencies": {
@@ -37,9 +37,7 @@
     "eslint-watch": "^2.0.0",
     "exenv": "^1.2.0",
     "express": "^4.13.3",
-    "gh-pages": "^0.4.0",
     "htmlmin": "0.0.4",
-    "inquirer": "^0.10.0",
     "jsdom": "^6.5.1",
     "mocha": "^2.2.5",
     "mocha-jsdom": "^1.0.0",
@@ -50,12 +48,13 @@
     "react-transform-hmr": "^1.0.0",
     "redbox-react": "^1.0.5",
     "should": "^7.1.0",
+    "surge": "^0.15.0",
     "webpack": "^1.10.5",
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.2.0"
   },
-  "engines" : {
-    "node" : "v4.1.1",
+  "engines": {
+    "node": "v4.1.1",
     "npm": "2.14.4"
   }
 }
