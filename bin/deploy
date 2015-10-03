@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+
+/* eslint-disable */
+
+var inquirer = require('inquirer');
+var ghpages = require('gh-pages');
+var path = require('path');
+
+inquirer.prompt([{
+  type: 'confirm',
+  name: 'push',
+  message: 'Deploy to gh-pages?'
+}], function(answers) {
+  publish(answers.push);
+});
+
+function publish(push) {
+  ghpages.publish(path.join(__dirname, '../dist'), {
+    push: push,
+  }, function(err) {
+    if (err) {
+      console.log('deployment failed:', err);
+    }
+  });
+}
