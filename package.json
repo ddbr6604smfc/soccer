@@ -48,6 +48,7 @@
     "react-transform-hmr": "^1.0.0",
     "redbox-react": "^1.0.5",
     "should": "^7.1.0",
+    "sinon": "^1.17.1",
     "surge": "^0.15.0",
     "webpack": "^1.10.5",
     "webpack-dev-middleware": "^1.2.0",
