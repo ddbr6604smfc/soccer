@@ -21,7 +21,7 @@ describe('actions', () => {
   describe('requestAllSeasons', () => {
     it('should fetch all seasons', (done) => {
       nock('https://soccer-proxy.herokuapp.com')
-        .get('/seasons')
+        .get('/soccerseasons')
         .reply(200, seasonsFixture);
 
       const dispatch = spy();
@@ -38,7 +38,7 @@ describe('actions', () => {
 
     it('should not refetch all seasons', (done) => {
       nock('https://soccer-proxy.herokuapp.com')
-        .get('/seasons')
+        .get('/soccerseasons')
         .reply(200, seasonsFixture);
 
       const dispatch = spy();

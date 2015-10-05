@@ -11,7 +11,7 @@ export const requestAllSeasons = () => (dispatch, getState) => {
     return Promise.resolve();
   }
 
-  return fetch('https://soccer-proxy.herokuapp.com/seasons')
+  return fetch('https://soccer-proxy.herokuapp.com/soccerseasons')
     .then(response => response.json())
     .then(seasons => dispatch(receiveAllSeasons(seasons)))
     .catch(err => {
