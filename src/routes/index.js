@@ -1,7 +1,7 @@
 import ApplicationRoute from './ApplicationRoute';
 import IndexRoute from './IndexRoute';
 import SeasonsRoute from './SeasonsRoute';
-import { requestAllSeasons } from '../actions';
+
 
 export const createRoutes = dispatch => ({
   path: '/',

@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
 
 class SeasonsRoute extends Component {
   static propTypes = {
@@ -20,9 +19,3 @@ class SeasonsRoute extends Component {
     );
   }
 }
-
-const mapStateToProps = state => ({
-  seasons: state.seasons,
-});
-
-export default connect(mapStateToProps)(SeasonsRoute);
